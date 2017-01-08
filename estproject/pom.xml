@@ -70,11 +70,7 @@
   			<artifactId>hessian</artifactId>
   			<version>${hessian.version}</version>
   		</dependency>
-		<dependency>
-			<groupId>com.estproject</groupId>
-			<artifactId>common-commands</artifactId>
-			<version>${estproject.version}</version>
-		</dependency>
+
 		<dependency>
 			<groupId>com.estproject</groupId>
 			<artifactId>common-framework</artifactId>

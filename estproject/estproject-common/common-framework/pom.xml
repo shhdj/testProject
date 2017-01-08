@@ -11,10 +11,7 @@
   		<groupId>com.caucho</groupId>
   		<artifactId>hessian</artifactId>
   	</dependency>
-  	<dependency>
-  		<groupId>com.estproject</groupId>
-  		<artifactId>common-commands</artifactId>
-  	</dependency>
+
     <dependency>
 		<groupId>org.slf4j</groupId>
 		<artifactId>log4j-over-slf4j</artifactId>

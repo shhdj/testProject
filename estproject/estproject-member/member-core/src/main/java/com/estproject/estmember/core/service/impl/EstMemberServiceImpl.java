@@ -6,7 +6,6 @@ package com.estproject.estmember.core.service.impl;
 
 import org.springframework.stereotype.Service;
 
-import com.estproject.common.command.Result;
 import com.estproject.estmember.core.service.EstMemberService;
 
 /**
@@ -18,9 +17,8 @@ import com.estproject.estmember.core.service.EstMemberService;
 public class EstMemberServiceImpl implements EstMemberService {
 
 	
-	public Result queryById(Long id) {
-		
-		return null;
+	public void queryById(Long id) {
+
 	}
 
 }

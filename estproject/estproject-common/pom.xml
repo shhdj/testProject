@@ -9,6 +9,5 @@
   <packaging>pom</packaging>
   <modules>
   	<module>common-framework</module>
-  	<module>common-commands</module>
   </modules>
 </project>

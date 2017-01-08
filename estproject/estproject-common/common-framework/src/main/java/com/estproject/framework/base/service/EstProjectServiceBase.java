@@ -4,7 +4,6 @@
  */
 package com.estproject.framework.base.service;
 
-import com.estproject.common.command.Result;
 
 /**
  * @author: 谭锡标
@@ -13,5 +12,5 @@ import com.estproject.common.command.Result;
  */
 public interface EstProjectServiceBase {
 
-	Result queryById(Long id);
+	void queryById(Long id);
 }

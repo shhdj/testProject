@@ -7,7 +7,6 @@ package com.estproject.storesales.core.member.ao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.estproject.common.command.Result;
 import com.estproject.estmember.common.hessian.EstMemberServiceRemote;
 import com.estproject.framework.base.AbstractBaseModule;
 
