@@ -10,7 +10,7 @@
   </modules>
   <parent>
   	<groupId>com.estproject</groupId>
-  	<artifactId>estproject-parent</artifactId>
+  	<artifactId>estproject</artifactId>
   	<version>1.0.0</version>
   </parent>
 </project>
