@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <property name="FILE_LOG_PATTERN" value="order-web [%d{yyyy-MM-dd HH:mm:ss}] - %X{method} %X{requestURIWithQueryString} %-5level %logger{80} - %m%n"/><!-- {35} -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>${FILE_LOG_PATTERN}</Pattern>
+        </encoder>
+        <!--    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+               <level>INFO</level>
+               <onMatch>ACCEPT</onMatch>
+               <onMismatch>DENY</onMismatch>
+              </filter> -->
+    </appender>
+
+    <appender name="PROJECT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <Pattern>${FILE_LOG_PATTERN}</Pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>c:/logs/estproject/member/member.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <!--日志文件最大的大小 -->
+        <!--
+        <triggeringPolicy
+            class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>20MB</MaxFileSize>
+        </triggeringPolicy>
+ 		-->
+
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <logger name="org.apache" level="info"/>
+    <logger name="com.etong.framework" level="info"/>
+    <logger name="org.springframework" level="info"/>
+    <logger name="com.alibaba.druid" level="info"/>
+    <logger name="org.mybatis" level="info"/>
+    <logger name="druid.sql" level="debug"/>
+    <root>
+        <level value="debug" />
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="PROJECT" />
+    </root>
+</configuration>

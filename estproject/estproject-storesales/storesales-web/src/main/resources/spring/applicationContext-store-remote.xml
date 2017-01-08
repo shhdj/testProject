@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+	<description>Store Hessian Service配置</description>
+	
+	<!--配置xml的动态属性值，多个时要加ignore-->
+	<context:property-placeholder ignore-resource-not-found="true" ignore-unresolvable="true"
+			location="classpath*:/conf/application.properties" />	
+	<!-- 会员服务 -->
+	<bean id="estMemberService" class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${member.url}/remote/estMemberService" />
+		<property name="proxyFactory" ref="authHessianProxyFactory"/>
+		<property name="serviceInterface" value="com.estproject.estmember.common.hessian.EstMemberServiceRemote" />
+		<property name="overloadEnabled" value="true"/>
+	</bean>
+	
+</beans>
