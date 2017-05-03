@@ -2,7 +2,6 @@ package com.estproject.service.uklink.thead;
 
 import java.util.Map.Entry;
 
-import com.etong.product.common.constant.ProdeuctEnum.ChannTypeEnum;
 /***
  * 数据库同步执行方法
  * @author  YZH

@@ -4,10 +4,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import com.etong.framework.util.thread.api.CallResult;
-import com.etong.framework.util.thread.api.ThreadPoolApi;
-import com.etong.framework.util.thread.iface.ICall;
-import com.etong.framework.util.thread.iface.IRun;
 
 /***
  * 线程执行工具

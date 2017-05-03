@@ -5,8 +5,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import com.etong.framework.util.thread.iface.ICall;
-import com.etong.framework.util.thread.iface.IRun;
 
 /***
  * 线程调用Api
@@ -43,7 +41,7 @@ public final class ThreadPoolApi {
 	 */
 	public void execute(final IRun run) {
 		this.getThreadPoolExecutor().execute(new Runnable() {
-			@Override
+
 			public synchronized void run() {
 				run.execute();
 				
