@@ -1,10 +1,9 @@
-package com.estproject.service.uklink.thead;
+package com.estproject.service.goods.thead;
 
 import java.util.concurrent.ThreadPoolExecutor;
 
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import com.etong.framework.util.SpringContextUtils;
 
 
 /***
@@ -47,7 +46,8 @@ final class ThreadPoolExecutorInit {
 	public ThreadPoolTaskExecutor getThreadPoolTaskExecutor(){
 		if( null == _threadPoolTaskExecutor ){
 			//throw new NullPointerException("not find the bean [threadPoolTaskExecutor] in this project!");
-			_threadPoolTaskExecutor = SpringContextUtils.getBean(ThreadPoolTaskExecutor.class);
+//			_threadPoolTaskExecutor = SpringContextUtils.getBean(ThreadPoolTaskExecutor.class);
+
 		}
 		return _threadPoolTaskExecutor;
 	}

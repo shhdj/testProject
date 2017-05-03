@@ -1,10 +1,11 @@
-package com.estproject.service.uklink.Dispatch;
+package com.estproject.service.goods.Dispatch;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Map;
 
+import com.estproject.service.goods.annotional.DispatchAnnotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -12,11 +13,8 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
-
-import com.etong.framework.controls.dispatcher.annotation.DispatchAnnotation;
-import com.etong.framework.controls.dispatcher.iface.IDispatch;
-import com.etong.framework.util.CollectionUtils;
-import com.etong.framework.util.ObjectUtils;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
 
 /***
  * 任务调度控制器
@@ -34,8 +32,7 @@ public class DispatchHandler implements InitializingBean, ApplicationContextAwar
 
 	
 
-	
-	@Override
+
 	@SuppressWarnings({ "unused", "unchecked" })
 	public void afterPropertiesSet() throws Exception {
 		try {
@@ -65,8 +62,7 @@ public class DispatchHandler implements InitializingBean, ApplicationContextAwar
 		
 	}
 	
-	
-	@Override
+
 	public void setApplicationContext(ApplicationContext applicationContext)
 			throws BeansException {
 		this.applicationContext = applicationContext;

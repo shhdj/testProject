@@ -1,4 +1,4 @@
-package com.estproject.service.uklink.thead;
+package com.estproject.service.goods.thead;
 
 import java.io.Serializable;
 import java.util.concurrent.Callable;

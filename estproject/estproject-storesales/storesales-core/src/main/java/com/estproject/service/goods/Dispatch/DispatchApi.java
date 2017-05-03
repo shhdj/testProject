@@ -1,9 +1,10 @@
-package com.estproject.service.uklink.Dispatch;
+package com.estproject.service.goods.Dispatch;
+
+import org.springframework.util.CollectionUtils;
 
 import java.lang.annotation.Annotation;
 import java.util.Map;
 
-import com.etong.framework.util.CollectionUtils;
 
 /***
  * 分发Api

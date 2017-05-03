@@ -1,4 +1,4 @@
-package com.estproject.service.uklink.Dispatch;
+package com.estproject.service.goods.Dispatch;
 
 import java.lang.annotation.Annotation;
 /***

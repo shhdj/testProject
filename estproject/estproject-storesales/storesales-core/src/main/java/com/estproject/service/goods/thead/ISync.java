@@ -1,6 +1,5 @@
-package com.estproject.service.uklink.thead;
+package com.estproject.service.goods.thead;
 
-import com.etong.commons.command.Result;
 /**
  * 商品数据同步
  * @author  YZH

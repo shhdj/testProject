@@ -1,4 +1,4 @@
-package com.estproject.service.uklink.thead;
+package com.estproject.service.goods.thead;
 
 import java.util.Map.Entry;
 
@@ -9,5 +9,5 @@ import java.util.Map.Entry;
  * @date 2016年4月15日
  */
 public interface ISyncData {
-  void syncData(Entry<ChannTypeEnum, ISync> entry);
+  void syncData(Entry<TheadEnum.ChannTypeEnum, ISync> entry);
 }

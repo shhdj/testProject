@@ -1,4 +1,4 @@
-package com.estproject.service.uklink.Dispatch;
+package com.estproject.service.goods.Dispatch;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
@@ -8,10 +8,9 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
 
-import com.etong.framework.controls.dispatcher.iface.IDispatch;
-import com.etong.framework.util.CollectionUtils;
-import com.etong.framework.util.ObjectUtils;
 
 /***
  * 策略加载器

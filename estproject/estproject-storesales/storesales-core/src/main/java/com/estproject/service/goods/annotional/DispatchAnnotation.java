@@ -1,4 +1,4 @@
-package com.estproject.service.uklink.annotional;
+package com.estproject.service.goods.annotional;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

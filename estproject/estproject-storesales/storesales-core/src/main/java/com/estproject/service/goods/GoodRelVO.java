@@ -1,4 +1,4 @@
-package com.estproject.service.uklink;
+package com.estproject.service.goods;
 
 import java.io.Serializable;
 
