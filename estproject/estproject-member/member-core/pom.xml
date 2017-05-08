@@ -16,5 +16,10 @@
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-context</artifactId>
   	</dependency>
+      <dependency>
+          <groupId>com.estproject</groupId>
+          <artifactId>storesales-common</artifactId>
+          <version>1.0.0</version>
+      </dependency>
   </dependencies>
 </project>

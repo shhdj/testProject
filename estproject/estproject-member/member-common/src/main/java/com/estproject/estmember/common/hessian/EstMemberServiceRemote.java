@@ -1,6 +1,7 @@
 package com.estproject.estmember.common.hessian;
 
 
+import com.estproject.estmember.common.domain.User;
 import com.estproject.framework.base.service.EstProjectServiceBase;
 
 /**
@@ -13,5 +14,5 @@ import com.estproject.framework.base.service.EstProjectServiceBase;
  */
 public interface EstMemberServiceRemote extends EstProjectServiceBase {
 
-	
+	User queryByUserId(Long Id);
 }

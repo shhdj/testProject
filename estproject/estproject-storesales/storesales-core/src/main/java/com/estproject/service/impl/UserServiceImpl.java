@@ -8,17 +8,19 @@ import com.estproject.common.domain.UserVO;
 import com.estproject.core.dao.UserDao;
 import com.estproject.service.IUserService;
 
+import javax.annotation.Resource;
+
 @Service
 @Transactional
 public class UserServiceImpl implements IUserService {
 //
-//	@Autowired
-//	private UserDao userDao;
+	@Resource
+	private UserDao userDao;
 	
 	public UserVO queryUser(Long id) {
-//		UserVO vo = userDao.queryUserById(id);
-//		return vo;
-		return new UserVO();
+		UserVO vo = userDao.queryUserById(id);
+		return vo;
+//		return new UserVO();
 	}
 
 }

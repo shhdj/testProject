@@ -18,7 +18,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-		<property name="typeAliasesPackage" value="com.storesales.domain" />
+		<property name="typeAliasesPackage" value="com.estproject.estmember.common.domain" />
 		<property name="configLocation" value="classpath:/spring/mybatis-configuration.xml" />
 		<!-- 显式指定Mapper文件位置 -->
 		<property name="mapperLocations" value="classpath*:/mappers/**/*-mapper.xml" />
@@ -26,7 +26,7 @@
 	
 	<!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.estproject.core.dao" />
+		<property name="basePackage" value="com.estproject.estmember.core.dao" />
 	</bean>
 	
 	<!-- 事务管理 -->

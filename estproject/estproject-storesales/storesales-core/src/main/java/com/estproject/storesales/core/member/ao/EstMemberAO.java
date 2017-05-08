@@ -4,6 +4,7 @@
  */
 package com.estproject.storesales.core.member.ao;
 
+import com.estproject.estmember.common.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,8 @@ public class EstMemberAO extends AbstractBaseModule {
 	@Autowired
 	private EstMemberServiceRemote estMemberService;
 	
-	public void queryMemberById(Long id){
-		estMemberService.queryById(id);
+	public User queryMemberById(Long id){
+		User u = estMemberService.queryByUserId(id);
+		return  u ;
 	}
 }

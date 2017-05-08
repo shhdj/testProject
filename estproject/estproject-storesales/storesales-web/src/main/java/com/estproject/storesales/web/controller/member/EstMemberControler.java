@@ -5,12 +5,16 @@
 package com.estproject.storesales.web.controller.member;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.estproject.storesales.core.member.ao.EstMemberAO;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author: 谭锡标
@@ -24,9 +28,9 @@ public class EstMemberControler {
 	@Autowired
 	private EstMemberAO estMemberAO;
 	
-	@RequestMapping(value="queryMemberById",method = RequestMethod.POST)
-	public String queryMemberById(String id){
-		if(StringUtils.isNotBlank(id)){
+	@RequestMapping(value="queryMemberById",method = {RequestMethod.GET,RequestMethod.POST})
+	public String queryMemberById(String id, HttpServletRequest request, HttpServletResponse response){
+		if(StringUtils.isNotBlank(id)&& NumberUtils.isDigits(id)){
 			Long memid = Long.valueOf(id);
 			estMemberAO.queryMemberById(memid);
 		}
