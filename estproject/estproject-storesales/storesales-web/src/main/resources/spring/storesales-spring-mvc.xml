@@ -15,13 +15,12 @@
       http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
       http://www.springframework.org/schema/aop
 	  http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
-      
-  
-     	       
+
+    <!-- controller需要这个配置，他会注册handlerMapping和handlerAdapter两个bean -->
+        <mvc:annotation-driven/>
 		<!-- <context:component-scan base-package="com.storesales" />-->
        <!--use-default-filters="true" 只会扫描下面配置的内容，至少有一个配置是不使用这个属性的 -->
      	<context:component-scan base-package="com.estproject" use-default-filters="true">
-			<!-- 自动扫描且只扫描@Controller -->
 				<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 				<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
 				<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
